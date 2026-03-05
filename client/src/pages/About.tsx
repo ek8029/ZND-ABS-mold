@@ -61,7 +61,7 @@ export default function About() {
             </div>
             </div>
             <div>
-              <img src={TEAM_PHOTO} alt="MoldGuard Pro team" className="w-full rounded-sm object-cover shadow-lg" />
+              <img src={TEAM_PHOTO} alt="ZND-ABS team" className="w-full rounded-sm object-cover shadow-lg" />
               <div className="grid grid-cols-2 gap-3 mt-4">
                 {[{ num: "24/7", label: "Emergency Response" }, { num: "Licensed", label: "& Insured" }].map((stat) => (
                   <div key={stat.label} className="bg-[#0B1F3A] text-white p-4 text-center rounded-sm">

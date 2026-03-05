@@ -33,7 +33,7 @@ export default function Contact() {
               Inspection
             </h1>
             <p className="mt-4 text-white/65 text-lg" style={{ fontFamily: "'Source Sans 3', sans-serif" }}>
-              We respond within 30 minutes. For emergencies, call us directly at (800) 724-3847.
+              We respond within 30 minutes. For emergencies, call us directly at (223) 208-8501.
             </p>
           </div>
         </div>
@@ -49,10 +49,9 @@ export default function Contact() {
               </h2>
               <div className="flex flex-col gap-5 mb-8">
                 {[
-                  { icon: Phone, label: "Emergency Line", value: "(800) 724-3847", href: "tel:+12232088501" },
-                  { icon: Mail, label: "Email", value: "info@moldguardpro.com", href: "mailto:info@moldguardpro.com" },
-                  { icon: Clock, label: "Hours", value: "24/7 — 365 Days a Year", href: null },
-                  { icon: MapPin, label: "Coverage", value: "Nationwide Service", href: null },
+                  { icon: Phone, label: "Emergency Line", value: "(223) 208-8501", href: "tel:+12232088501" },
+                  { icon: MapPin, label: "Address", value: "1356 S Atherton St, State College, PA 16801", href: "https://maps.app.goo.gl/xeim2zw25dSRoPyZ7" },
+                  { icon: Clock, label: "Hours", value: "Call for availability", href: null },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-3">
                     <div className="w-10 h-10 bg-[#F59E0B] rounded-sm flex items-center justify-center flex-shrink-0">
@@ -91,7 +90,7 @@ export default function Contact() {
                 ))}
               </div>
 
-              <img src={TEAM_PHOTO} alt="Our team" className="w-full rounded-sm object-cover" style={{ maxHeight: "180px" }} />
+              <img src={TEAM_PHOTO} alt="ZND-ABS team" className="w-full rounded-sm object-cover" style={{ maxHeight: "180px" }} />
             </div>
 
             {/* Form */}
