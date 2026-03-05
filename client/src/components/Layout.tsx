@@ -199,7 +199,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* Footer */}
       <footer className="bg-[#0B1F3A] text-white">
         <div className="container py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {/* Brand */}
             <div className="lg:col-span-1">
               <div className="flex items-center gap-2.5 mb-4">
@@ -237,35 +237,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </ul>
             </div>
 
-            {/* Service Areas */}
+            {/* Company */}
             <div>
               <h4 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "1rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#F59E0B", marginBottom: "1rem" }}>
-                Service Areas
-              </h4>
-              <ul className="flex flex-col gap-2">
-                {["New York, NY", "Los Angeles, CA", "Chicago, IL", "Houston, TX", "Phoenix, AZ", "Philadelphia, PA", "San Antonio, TX"].map((area) => (
-                  <li key={area}>
-                    <Link href="/service-areas">
-                      <span className="text-white/60 hover:text-white text-sm transition-colors">{area}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Certifications + Contact */}
-            <div>
-              <h4 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "1rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#F59E0B", marginBottom: "1rem" }}>
-                Certifications
-              </h4>
-              <div className="flex flex-wrap gap-2 mb-6">
-                {["IICRC", "OSHA", "IAQA", "EPA"].map((cert) => (
-                  <span key={cert} className="px-3 py-1 bg-white/10 border border-white/20 text-white/80 text-xs font-bold tracking-widest rounded-sm">
-                    {cert}
-                  </span>
-                ))}
-              </div>
-              <h4 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "1rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "#F59E0B", marginBottom: "0.75rem" }}>
                 Company
               </h4>
               <ul className="flex flex-col gap-2">
