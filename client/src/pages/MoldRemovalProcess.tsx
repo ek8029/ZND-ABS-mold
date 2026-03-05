@@ -81,7 +81,7 @@ export default function MoldRemovalProcess() {
               Every remediation project is backed by our written guarantee. If mold returns in the treated area within 12 months, we return and re-treat at no cost to you. We also provide full documentation for insurance claims.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a href="tel:+17175723847" className="btn-amber">
+              <a href="tel:+12232088501" className="btn-amber">
                 <Phone className="w-4 h-4" />
                 Call Now
               </a>

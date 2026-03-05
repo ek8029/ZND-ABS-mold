@@ -17,7 +17,7 @@ export default function FloatingCTA() {
       <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-[#0B1F3A] border-t border-white/10 shadow-2xl">
         <div className="grid grid-cols-2">
           <a
-            href="tel:+17175723847"
+            href="tel:+12232088501"
             className="flex items-center justify-center gap-2 py-4 bg-[#F59E0B] text-[#0B1F3A] font-bold"
             style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "1rem", letterSpacing: "0.04em", textTransform: "uppercase" }}
           >
@@ -57,7 +57,7 @@ export default function FloatingCTA() {
               </div>
               <div className="p-4 flex flex-col gap-2.5">
                 <a
-                  href="tel:+17175723847"
+                  href="tel:+12232088501"
                   className="flex items-center gap-2.5 bg-[#F59E0B] text-[#0B1F3A] px-4 py-2.5 font-bold hover:bg-amber-500 transition-colors"
                   style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "0.95rem", letterSpacing: "0.04em", textTransform: "uppercase" }}
                 >

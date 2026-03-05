@@ -18,7 +18,7 @@ export default function NotFound() {
           The page you're looking for doesn't exist. If you have a mold emergency, call us immediately.
         </p>
         <div className="flex flex-wrap justify-center gap-3">
-          <a href="tel:+17175723847" className="btn-amber">
+          <a href="tel:+12232088501" className="btn-amber">
             <Phone className="w-4 h-4" />
             Call (800) 724-3847
           </a>

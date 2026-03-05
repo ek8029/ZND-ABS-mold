@@ -84,7 +84,7 @@ export default function Services() {
               From initial inspection to full restoration — certified specialists handling every aspect of mold removal and prevention.
             </p>
             <div className="mt-6 flex gap-3">
-              <a href="tel:+17175723847" className="btn-amber">
+              <a href="tel:+12232088501" className="btn-amber">
                 <Phone className="w-4 h-4" />
                 Call (800) 724-3847
               </a>
@@ -132,7 +132,7 @@ export default function Services() {
                     ))}
                   </div>
                   <div className="flex gap-3">
-                    <a href="tel:+17175723847" className="btn-amber text-sm py-2.5">
+                    <a href="tel:+12232088501" className="btn-amber text-sm py-2.5">
                       <Phone className="w-4 h-4" />
                       Call Now
                     </a>
@@ -173,7 +173,7 @@ export default function Services() {
             Call now for a free inspection or schedule online. We respond within 30 minutes.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
-            <a href="tel:+17175723847" className="inline-flex items-center gap-2 bg-[#0B1F3A] text-white px-6 py-3 font-bold uppercase tracking-wider text-sm hover:bg-[#0d2545] transition-colors"
+            <a href="tel:+12232088501" className="inline-flex items-center gap-2 bg-[#0B1F3A] text-white px-6 py-3 font-bold uppercase tracking-wider text-sm hover:bg-[#0d2545] transition-colors"
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
               <Phone className="w-4 h-4" />
               Call (800) 724-3847

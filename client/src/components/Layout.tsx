@@ -7,7 +7,7 @@
  */
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Phone, Menu, X, Shield, ChevronDown } from "lucide-react";
+import { Phone, Menu, X, Shield, ChevronDown, MapPin } from "lucide-react";
 import FloatingCTA from "./FloatingCTA";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -54,7 +54,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             24/7 Emergency Mold Removal
           </span>
           <a
-            href="tel:+17175723847"
+            href="tel:+12232088501"
             className="font-bold underline underline-offset-2 hover:opacity-80 transition-opacity"
             style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "1rem" }}
           >
@@ -135,7 +135,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center gap-3">
-              <a href="tel:+17175723847" className="flex items-center gap-2 text-white hover:text-[#F59E0B] transition-colors">
+              <a href="tel:+12232088501" className="flex items-center gap-2 text-white hover:text-[#F59E0B] transition-colors">
                 <Phone className="w-4 h-4" />
                 <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "1.05rem", letterSpacing: "0.03em" }}>
                   (800) 724-3847
@@ -177,7 +177,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   </Link>
                 ))}
                 <div className="pt-4 flex flex-col gap-3">
-                  <a href="tel:+17175723847" className="btn-amber justify-center">
+                  <a href="tel:+12232088501" className="btn-amber justify-center">
                     <Phone className="w-4 h-4" />
                     Call (800) 724-3847
                   </a>
@@ -214,9 +214,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               Professional mold removal and remediation services for State College, PA. Licensed, insured, and committed to your family's safety.
             </p>
               <div className="flex flex-col gap-2">
-                <a href="tel:+17175723847" className="flex items-center gap-2 text-[#F59E0B] hover:text-amber-300 transition-colors font-semibold">
+                <a href="tel:+12232088501" className="flex items-center gap-2 text-[#F59E0B] hover:text-amber-300 transition-colors font-semibold">
                   <Phone className="w-4 h-4" />
-                  (800) 724-3847
+                  (223) 208-8501
+                </a>
+                <a href="https://maps.app.goo.gl/xeim2zw25dSRoPyZ7" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-white/60 hover:text-white transition-colors text-sm">
+                  <MapPin className="w-4 h-4" />
+                  1356 S Atherton St, State College, PA 16801
                 </a>
               </div>
             </div>
