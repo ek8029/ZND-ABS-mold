@@ -110,9 +110,9 @@ export default function ServiceAreas() {
                 </p>
               </div>
               <div className="flex flex-col gap-3">
-                <a href="tel:+18005550199" className="btn-amber justify-center">
+                <a href="tel:+17175723847" className="btn-amber justify-center">
                   <Phone className="w-4 h-4" />
-                  Call (800) 555-0199
+                  Call (800) 724-3847
                 </a>
                 <Link href="/contact">
                   <span className="btn-white-outline w-full justify-center">Request Inspection</span>

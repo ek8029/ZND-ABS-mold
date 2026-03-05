@@ -42,7 +42,7 @@ export default function MoldInspection() {
               Comprehensive assessment using advanced technology to locate every mold source — including hidden growth you can't see.
             </p>
             <div className="mt-6 flex gap-3">
-              <a href="tel:+18005550199" className="btn-amber">
+              <a href="tel:+17175723847" className="btn-amber">
                 <Phone className="w-4 h-4" />
                 Schedule Inspection
               </a>
@@ -117,7 +117,7 @@ export default function MoldInspection() {
             ))}
           </div>
           <div className="mt-10 text-center">
-            <a href="tel:+18005550199" className="btn-amber text-base py-3 px-8">
+            <a href="tel:+17175723847" className="btn-amber text-base py-3 px-8">
               <Phone className="w-5 h-5" />
               Schedule Your Free Inspection
             </a>

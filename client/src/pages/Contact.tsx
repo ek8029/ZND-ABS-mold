@@ -33,7 +33,7 @@ export default function Contact() {
               Inspection
             </h1>
             <p className="mt-4 text-white/65 text-lg" style={{ fontFamily: "'Source Sans 3', sans-serif" }}>
-              We respond within 30 minutes. For emergencies, call us directly at (800) 555-0199.
+              We respond within 30 minutes. For emergencies, call us directly at (800) 724-3847.
             </p>
           </div>
         </div>
@@ -49,7 +49,7 @@ export default function Contact() {
               </h2>
               <div className="flex flex-col gap-5 mb-8">
                 {[
-                  { icon: Phone, label: "Emergency Line", value: "(800) 555-0199", href: "tel:+18005550199" },
+                  { icon: Phone, label: "Emergency Line", value: "(800) 724-3847", href: "tel:+17175723847" },
                   { icon: Mail, label: "Email", value: "info@moldguardpro.com", href: "mailto:info@moldguardpro.com" },
                   { icon: Clock, label: "Hours", value: "24/7 — 365 Days a Year", href: null },
                   { icon: MapPin, label: "Coverage", value: "Nationwide Service", href: null },
@@ -109,9 +109,9 @@ export default function Contact() {
                   <p style={{ fontFamily: "'Source Sans 3', sans-serif", color: "#4B5563", fontSize: "1rem", maxWidth: "400px", margin: "0 auto 1.5rem" }}>
                     Our team will contact you within 30 minutes. For immediate emergencies, call us directly.
                   </p>
-                  <a href="tel:+18005550199" className="btn-amber text-base py-3 px-8 inline-flex">
+                  <a href="tel:+17175723847" className="btn-amber text-base py-3 px-8 inline-flex">
                     <Phone className="w-5 h-5" />
-                    Call (800) 555-0199
+                    Call (800) 724-3847
                   </a>
                 </motion.div>
               ) : (
@@ -202,7 +202,7 @@ export default function Contact() {
                     Submit Free Inspection Request
                   </button>
                   <p className="text-xs text-gray-400 text-center mt-3" style={{ fontFamily: "'Source Sans 3', sans-serif" }}>
-                    We respond within 30 minutes. For emergencies, call (800) 555-0199 directly.
+                    We respond within 30 minutes. For emergencies, call (800) 724-3847 directly.
                   </p>
                 </form>
               )}

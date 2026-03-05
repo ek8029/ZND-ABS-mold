@@ -131,7 +131,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="mt-8 flex flex-wrap gap-3"
             >
-              <a href="tel:+18005550199" className="btn-amber text-base py-3 px-6">
+              <a href="tel:+17175723847" className="btn-amber text-base py-3 px-6">
                 <Phone className="w-5 h-5" />
                 Call Now — Free
               </a>
@@ -216,7 +216,7 @@ export default function Home() {
                 If you notice any of these signs, call us immediately for a free inspection. Early intervention prevents costly structural damage.
               </p>
             </div>
-            <a href="tel:+18005550199" className="btn-amber flex-shrink-0 text-sm py-2.5">
+            <a href="tel:+17175723847" className="btn-amber flex-shrink-0 text-sm py-2.5">
               <Phone className="w-4 h-4" />
               Call Now
             </a>
@@ -443,7 +443,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col gap-4">
                 {[
-                  { icon: Phone, label: "Emergency Line", value: "(800) 555-0199" },
+                  { icon: Phone, label: "Emergency Line", value: "(800) 724-3847" },
                   { icon: Clock, label: "Response Time", value: "Available 24/7, 365 days" },
                   { icon: Shield, label: "Guarantee", value: "Written work guarantee" },
                 ].map((item) => (
@@ -475,7 +475,7 @@ export default function Home() {
                     Request Received!
                   </h3>
                   <p style={{ fontFamily: "'Source Sans 3', sans-serif", color: "#4B5563" }}>
-                    Our team will contact you within 30 minutes. For emergencies, call <a href="tel:+18005550199" className="text-[#F59E0B] font-bold">(800) 555-0199</a> now.
+                    Our team will contact you within 30 minutes. For emergencies, call <a href="tel:+17175723847" className="text-[#F59E0B] font-bold">(800) 724-3847</a> now.
                   </p>
                 </div>
               ) : (
@@ -563,7 +563,7 @@ export default function Home() {
                     Request Free Inspection
                   </button>
                   <p className="text-xs text-gray-400 text-center" style={{ fontFamily: "'Source Sans 3', sans-serif" }}>
-                    We respond within 30 minutes. For emergencies, call (800) 555-0199.
+                    We respond within 30 minutes. For emergencies, call (800) 724-3847.
                   </p>
                 </form>
               )}

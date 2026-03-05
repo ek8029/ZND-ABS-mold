@@ -54,11 +54,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             24/7 Emergency Mold Removal
           </span>
           <a
-            href="tel:+18005550199"
+            href="tel:+17175723847"
             className="font-bold underline underline-offset-2 hover:opacity-80 transition-opacity"
             style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "1rem" }}
           >
-            (800) 555-0199
+            (800) 724-3847
           </a>
         </div>
       </div>
@@ -135,10 +135,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center gap-3">
-              <a href="tel:+18005550199" className="flex items-center gap-2 text-white hover:text-[#F59E0B] transition-colors">
+              <a href="tel:+17175723847" className="flex items-center gap-2 text-white hover:text-[#F59E0B] transition-colors">
                 <Phone className="w-4 h-4" />
                 <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "1.05rem", letterSpacing: "0.03em" }}>
-                  (800) 555-0199
+                  (800) 724-3847
                 </span>
               </a>
               <Link href="/contact">
@@ -177,9 +177,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   </Link>
                 ))}
                 <div className="pt-4 flex flex-col gap-3">
-                  <a href="tel:+18005550199" className="btn-amber justify-center">
+                  <a href="tel:+17175723847" className="btn-amber justify-center">
                     <Phone className="w-4 h-4" />
-                    Call (800) 555-0199
+                    Call (800) 724-3847
                   </a>
                   <Link href="/contact">
                     <span className="btn-white-outline w-full justify-center">Free Inspection</span>
@@ -214,9 +214,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               Professional mold removal and remediation services for State College, PA. Licensed, insured, and committed to your family's safety.
             </p>
               <div className="flex flex-col gap-2">
-                <a href="tel:+18005550199" className="flex items-center gap-2 text-[#F59E0B] hover:text-amber-300 transition-colors font-semibold">
+                <a href="tel:+17175723847" className="flex items-center gap-2 text-[#F59E0B] hover:text-amber-300 transition-colors font-semibold">
                   <Phone className="w-4 h-4" />
-                  (800) 555-0199
+                  (800) 724-3847
                 </a>
               </div>
             </div>
