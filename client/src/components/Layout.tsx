@@ -81,7 +81,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </div>
                 <div>
                   <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "1.35rem", letterSpacing: "0.02em", color: "white", lineHeight: 1.1 }}>
-                    MOLDGUARD PRO
+                    ZND-ABS
                   </div>
                   <div style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: "0.65rem", color: "rgba(255,255,255,0.55)", letterSpacing: "0.12em", textTransform: "uppercase", lineHeight: 1 }}>
                     Mold Removal & Remediation
@@ -207,12 +207,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <Shield className="w-5 h-5 text-[#0B1F3A]" />
                 </div>
                 <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "1.25rem", letterSpacing: "0.02em" }}>
-                  MOLDGUARD PRO
+                  ZND-ABS
                 </div>
               </div>
-              <p className="text-white/60 text-sm leading-relaxed mb-4">
-                Certified mold remediation specialists serving homeowners and businesses 24/7. IICRC certified, fully insured.
-              </p>
+            <p className="text-white/60 text-sm leading-relaxed mb-4">
+              Professional mold removal and remediation services for State College, PA. Licensed, insured, and committed to your family's safety.
+            </p>
               <div className="flex flex-col gap-2">
                 <a href="tel:+18005550199" className="flex items-center gap-2 text-[#F59E0B] hover:text-amber-300 transition-colors font-semibold">
                   <Phone className="w-4 h-4" />
@@ -287,7 +287,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
           <div className="border-t border-white/10 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-white/40 text-sm">
-              © {new Date().getFullYear()} MoldGuard Pro. All rights reserved. Licensed & Insured.
+              © {new Date().getFullYear()} ZND-ABS Mold Removal & Remediation. All rights reserved. Licensed & Insured.
             </p>
             <div className="flex gap-6">
               <Link href="/contact"><span className="text-white/40 hover:text-white/70 text-sm transition-colors">Privacy Policy</span></Link>

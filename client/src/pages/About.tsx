@@ -45,27 +45,27 @@ export default function About() {
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "2.2rem", textTransform: "uppercase", color: "#0B1F3A", marginBottom: "1rem" }}>
-                Our Story
-              </h2>
-              <div className="flex flex-col gap-4 text-gray-600" style={{ fontFamily: "'Source Sans 3', sans-serif", lineHeight: 1.75 }}>
-                <p>
-                  MoldGuard Pro was founded in 2009 by certified mold remediation specialists who saw a critical gap in the market: homeowners facing serious mold problems were being served by companies without proper training, equipment, or accountability.
-                </p>
-                <p>
-                  We built MoldGuard Pro on a simple principle — every family deserves a safe, mold-free home, and every remediation job should be done right the first time. Over 15 years and 2,500+ completed projects later, that principle still guides everything we do.
-                </p>
-                <p>
-                  Our technicians hold IICRC, OSHA, and IAQA certifications — the highest credentials in the industry. We invest in ongoing training and the latest equipment to ensure we can handle any mold situation, from a small bathroom colony to full commercial building remediation.
-                </p>
-              </div>
+            <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "2.2rem", textTransform: "uppercase", color: "#0B1F3A", marginBottom: "1rem" }}>
+              About ZND-ABS
+            </h2>
+            <div className="flex flex-col gap-4 text-gray-600" style={{ fontFamily: "'Source Sans 3', sans-serif", lineHeight: 1.75 }}>
+              <p>
+                ZND-ABS Mold Removal & Remediation is a licensed and insured mold remediation specialist serving State College and Centre County, Pennsylvania. We're committed to helping homeowners and businesses identify and eliminate mold problems quickly and safely.
+              </p>
+              <p>
+                Every mold situation is different. Whether you've discovered visible mold, noticed a musty smell, or suspect hidden growth after water damage, we provide honest assessments and straightforward remediation solutions without unnecessary upselling.
+              </p>
+              <p>
+                We use industry-standard equipment and proven remediation protocols to ensure complete mold removal and prevention. Our goal is simple: get your property back to safe, healthy condition and make sure the problem doesn't return.
+              </p>
+            </div>
             </div>
             <div>
               <img src={TEAM_PHOTO} alt="MoldGuard Pro team" className="w-full rounded-sm object-cover shadow-lg" />
-              <div className="grid grid-cols-3 gap-3 mt-4">
-                {[{ num: "2,500+", label: "Projects Completed" }, { num: "15+", label: "Years in Business" }, { num: "98%", label: "Satisfaction Rate" }].map((stat) => (
+              <div className="grid grid-cols-2 gap-3 mt-4">
+                {[{ num: "24/7", label: "Emergency Response" }, { num: "Licensed", label: "& Insured" }].map((stat) => (
                   <div key={stat.label} className="bg-[#0B1F3A] text-white p-4 text-center rounded-sm">
-                    <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontSize: "1.8rem", color: "#F59E0B" }}>{stat.num}</div>
+                    <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "1.2rem", color: "#F59E0B" }}>{stat.num}</div>
                     <div style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: "0.75rem", color: "rgba(255,255,255,0.6)", textTransform: "uppercase", letterSpacing: "0.06em" }}>{stat.label}</div>
                   </div>
                 ))}

@@ -2,55 +2,20 @@
  * Design: Industrial Safety Meets Clinical Precision
  * - Deep navy (#0B1F3A) + amber (#F59E0B) + white
  * - Barlow Condensed headings + Source Sans 3 body
- * - Asymmetric hero, diagonal section cuts, stat counters
- * Sections: Hero, Stats, Mold Risk Indicators, Services, Process, Before/After, Testimonials, Certifications, Service Areas, Contact Form
+ * - Asymmetric hero, diagonal section cuts
+ * Sections: Hero, Mold Risk Indicators, Services, Process, Testimonials, Certifications, Contact Form
  */
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { Link } from "wouter";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Phone, Calendar, CheckCircle, AlertTriangle, Droplets, Wind, Eye,
   Home as HomeIcon, Building2, Star, MapPin, ArrowRight, Shield,
-  Thermometer, Clock, Award, ChevronLeft, ChevronRight, Send
+  Thermometer, Clock, Award, Send
 } from "lucide-react";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663405856970/VMX2oirNaVBBf73TmR5SdG/hero-bg-5bagSkA6jQYg8vjVjwoa3P.webp";
-const MOLD_BEFORE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663405856970/VMX2oirNaVBBf73TmR5SdG/mold-before-Fwzbg6Z45sJ2LsCuWJnwsi.webp";
-const MOLD_AFTER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663405856970/VMX2oirNaVBBf73TmR5SdG/mold-after-945scPKKRMRrtNzaMTBni4.webp";
 const TEAM_PHOTO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663405856970/VMX2oirNaVBBf73TmR5SdG/team-photo-7fLbKQFaG3XezRQmwujAsr.webp";
-
-// Animated counter hook
-function useCounter(target: number, duration = 2000, start = false) {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    if (!start) return;
-    let startTime: number | null = null;
-    const step = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / duration, 1);
-      setCount(Math.floor(progress * target));
-      if (progress < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  }, [start, target, duration]);
-  return count;
-}
-
-function StatCounter({ value, suffix, label }: { value: number; suffix: string; label: string }) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true });
-  const count = useCounter(value, 1800, inView);
-  return (
-    <div ref={ref} className="text-center">
-      <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontSize: "3.5rem", lineHeight: 1, color: "#F59E0B" }}>
-        {count}{suffix}
-      </div>
-      <div style={{ fontFamily: "'Source Sans 3', sans-serif", fontWeight: 500, fontSize: "0.9rem", color: "rgba(255,255,255,0.65)", textTransform: "uppercase", letterSpacing: "0.06em", marginTop: "0.25rem" }}>
-        {label}
-      </div>
-    </div>
-  );
-}
 
 const moldRisks = [
   { icon: Wind, label: "Musty Smell", desc: "Persistent odors even after cleaning may indicate hidden mold colonies behind walls or under floors." },
@@ -82,43 +47,29 @@ const processSteps = [
 
 const testimonials = [
   {
-    name: "Sarah M.",
-    location: "New York, NY",
+    name: "Robert K.",
+    location: "State College, PA",
     rating: 5,
-    text: "After discovering black mold in our basement, MoldGuard Pro responded within 2 hours. Their team was professional, thorough, and completely removed all mold. Our air quality tests came back clean. Highly recommend!",
+    text: "Found mold in our basement after a water leak. ZND-ABS came out quickly, assessed the damage, and handled the remediation professionally. Great service and fair pricing.",
     source: "Google",
   },
   {
-    name: "James T.",
-    location: "Chicago, IL",
+    name: "Jennifer L.",
+    location: "State College, PA",
     rating: 5,
-    text: "We had a serious mold problem after a pipe burst. MoldGuard Pro handled everything — from the initial inspection to working directly with our insurance company. The whole process was seamless.",
-    source: "Yelp",
+    text: "We had mold in our attic that we didn't even know about. The team was thorough, explained everything clearly, and got the job done right. Highly recommend for State College area.",
+    source: "Local",
   },
   {
-    name: "Linda R.",
-    location: "Houston, TX",
+    name: "David M.",
+    location: "State College, PA",
     rating: 5,
-    text: "The technicians were IICRC certified and explained every step of the process. They found mold in our attic that we didn't even know about. Professional, fast, and the results speak for themselves.",
-    source: "Angi",
-  },
-  {
-    name: "Michael D.",
-    location: "Phoenix, AZ",
-    rating: 5,
-    text: "As a property manager, I've used MoldGuard Pro for multiple buildings. Their commercial team is exceptional — minimal disruption to tenants and thorough documentation for insurance purposes.",
+    text: "Professional, reliable, and honest. They didn't try to upsell us on unnecessary work. Just fixed the problem and made sure it won't come back. Will definitely call them again if needed.",
     source: "Google",
   },
-];
-
-const serviceAreas = [
-  "New York, NY", "Los Angeles, CA", "Chicago, IL", "Houston, TX",
-  "Phoenix, AZ", "Philadelphia, PA", "San Antonio, TX", "San Diego, CA",
-  "Dallas, TX", "San Jose, CA", "Austin, TX", "Jacksonville, FL",
 ];
 
 export default function Home() {
-  const [beforeAfterSlide, setBeforeAfterSlide] = useState(0);
   const [formData, setFormData] = useState({ name: "", phone: "", email: "", message: "", service: "" });
   const [submitted, setSubmitted] = useState(false);
 
@@ -159,9 +110,9 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.1 }}
               style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontSize: "clamp(2.8rem, 7vw, 5.5rem)", lineHeight: 1.0, textTransform: "uppercase", color: "white", letterSpacing: "0.01em" }}
             >
-              Emergency Mold<br />
-              <span style={{ color: "#F59E0B" }}>Removal</span> —<br />
-              Fast & Safe
+              Mold Removal<br />
+              <span style={{ color: "#F59E0B" }}>in State College</span><br />
+              PA
             </motion.h1>
 
             <motion.p
@@ -171,7 +122,7 @@ export default function Home() {
               className="mt-5 text-white/80 text-lg leading-relaxed max-w-lg"
               style={{ fontFamily: "'Source Sans 3', sans-serif" }}
             >
-              Certified mold specialists available 24/7. Free inspection, guaranteed removal, and direct insurance assistance. Mold develops within 24–48 hours — don't wait.
+              Professional mold remediation and inspection services available 24/7. Free inspection, licensed and insured. Mold develops within 24–48 hours after water damage — don't wait.
             </motion.p>
 
             <motion.div
@@ -198,7 +149,7 @@ export default function Home() {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="mt-8 flex flex-wrap gap-4"
             >
-              {["Free Inspection", "IICRC Certified", "Insurance Assistance", "Guaranteed Results"].map((badge) => (
+              {["Free Inspection", "Licensed & Insured", "24/7 Emergency", "Guaranteed Work"].map((badge) => (
                 <div key={badge} className="flex items-center gap-1.5">
                   <CheckCircle className="w-4 h-4 text-[#F59E0B]" />
                   <span style={{ fontFamily: "'Source Sans 3', sans-serif", fontWeight: 600, fontSize: "0.85rem", color: "rgba(255,255,255,0.85)" }}>
@@ -212,18 +163,6 @@ export default function Home() {
 
         {/* Diagonal bottom cut */}
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-white" style={{ clipPath: "polygon(0 100%, 100% 0, 100% 100%)" }} />
-      </section>
-
-      {/* ─── STATS BAR ─── */}
-      <section className="bg-[#0B1F3A] py-12">
-        <div className="container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 divide-x divide-white/10">
-            <StatCounter value={2500} suffix="+" label="Homes Restored" />
-            <StatCounter value={15} suffix="+" label="Years Experience" />
-            <StatCounter value={98} suffix="%" label="Customer Satisfaction" />
-            <StatCounter value={24} suffix="/7" label="Emergency Response" />
-          </div>
-        </div>
       </section>
 
       {/* ─── MOLD RISK INDICATORS ─── */}
@@ -348,7 +287,7 @@ export default function Home() {
               7-Step Certified<br />Remediation Process
             </h2>
             <p className="mt-3 text-white/60 max-w-xl" style={{ fontFamily: "'Source Sans 3', sans-serif" }}>
-              Our multi-step process ensures complete mold removal and prevents future growth — certified by IICRC standards.
+              Our multi-step process ensures complete mold removal and prevents future growth — certified by industry standards.
             </p>
           </div>
 
@@ -401,64 +340,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── BEFORE / AFTER ─── */}
-      <section className="py-20 bg-white">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-block bg-[#F59E0B]/10 border-l-4 border-[#F59E0B] px-4 py-1 mb-3">
-                <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "#F59E0B" }}>
-                  Proof of Results
-                </span>
-              </div>
-              <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "clamp(2rem, 4vw, 3rem)", textTransform: "uppercase", color: "#0B1F3A", marginBottom: "1rem" }}>
-                Before & After<br />Transformation
-              </h2>
-              <p style={{ fontFamily: "'Source Sans 3', sans-serif", color: "#4B5563", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-                Our certified technicians completely eliminate mold contamination and restore your property to a safe, clean condition. See the results for yourself.
-              </p>
-              <div className="flex flex-col gap-3 mb-6">
-                {["Complete mold elimination — not just surface treatment", "Air quality testing confirms clearance", "Written documentation for insurance claims", "Structural repairs and restoration included"].map((item) => (
-                  <div key={item} className="flex items-start gap-2.5">
-                    <CheckCircle className="w-5 h-5 text-[#F59E0B] flex-shrink-0 mt-0.5" />
-                    <span style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: "0.95rem", color: "#374151" }}>{item}</span>
-                  </div>
-                ))}
-              </div>
-              <a href="tel:+18005550199" className="btn-amber">
-                <Phone className="w-4 h-4" />
-                Get Free Inspection
-              </a>
-            </div>
-
-            <div>
-              <div className="grid grid-cols-2 gap-3">
-                <div className="relative">
-                  <img src={MOLD_BEFORE} alt="Before mold remediation" className="w-full aspect-square object-cover rounded-sm" />
-                  <div className="absolute top-3 left-3 bg-red-600 text-white px-3 py-1 text-xs font-bold uppercase tracking-wider"
-                    style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
-                    Before
-                  </div>
-                </div>
-                <div className="relative">
-                  <img src={MOLD_AFTER} alt="After mold remediation" className="w-full aspect-square object-cover rounded-sm" />
-                  <div className="absolute top-3 left-3 bg-green-600 text-white px-3 py-1 text-xs font-bold uppercase tracking-wider"
-                    style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
-                    After
-                  </div>
-                </div>
-              </div>
-              <div className="mt-3 p-4 bg-green-50 border border-green-200 rounded-sm flex items-center gap-3">
-                <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
-                <p style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: "0.9rem", color: "#166534" }}>
-                  <strong>Air quality test passed.</strong> Mold spore count reduced to safe levels — verified by independent lab analysis.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ─── TESTIMONIALS ─── */}
       <section className="py-20 bg-[#F8F9FA]">
         <div className="container">
@@ -474,12 +355,12 @@ export default function Home() {
             <div className="flex items-center justify-center gap-2 mt-3">
               {[1,2,3,4,5].map((s) => <Star key={s} className="w-5 h-5 fill-[#F59E0B] text-[#F59E0B]" />)}
               <span style={{ fontFamily: "'Source Sans 3', sans-serif", fontWeight: 600, color: "#374151", marginLeft: "0.5rem" }}>
-                4.9/5 — 500+ Reviews
+                5.0/5 — Local Reviews
               </span>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {testimonials.map((t, i) => (
               <motion.div
                 key={t.name}
@@ -501,7 +382,6 @@ export default function Home() {
                     <div className="flex gap-0.5">
                       {[1,2,3,4,5].map((s) => <Star key={s} className="w-3.5 h-3.5 fill-[#F59E0B] text-[#F59E0B]" />)}
                     </div>
-                    <span className="text-xs text-gray-400" style={{ fontFamily: "'Source Sans 3', sans-serif" }}>via {t.source}</span>
                   </div>
                 </div>
                 <p style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: "0.9rem", color: "#4B5563", lineHeight: 1.7, fontStyle: "italic" }}>
@@ -518,23 +398,21 @@ export default function Home() {
         <div className="container">
           <div className="text-center mb-10">
             <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "2rem", textTransform: "uppercase", color: "white" }}>
-              Certified & Trusted
+              Licensed & Insured
             </h2>
             <p style={{ fontFamily: "'Source Sans 3', sans-serif", color: "rgba(255,255,255,0.55)", marginTop: "0.5rem" }}>
-              Our technicians hold the highest industry certifications
+              Fully licensed and insured for your peace of mind
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-6">
             {[
-              { name: "IICRC", desc: "Institute of Inspection Cleaning and Restoration Certification" },
-              { name: "OSHA", desc: "Occupational Safety and Health Administration Certified" },
-              { name: "IAQA", desc: "Indoor Air Quality Association Member" },
-              { name: "EPA", desc: "EPA Lead-Safe Certified Firm" },
-              { name: "NORMI", desc: "National Organization of Remediators and Mold Inspectors" },
+              { name: "Licensed", desc: "State of Pennsylvania Licensed Contractor" },
+              { name: "Insured", desc: "Full General Liability Insurance Coverage" },
+              { name: "Bonded", desc: "Bonded for Your Protection" },
             ].map((cert) => (
-              <div key={cert.name} className="flex flex-col items-center gap-2 bg-white/5 border border-white/10 rounded-sm px-6 py-5 min-w-[140px] hover:bg-white/10 transition-colors">
+              <div key={cert.name} className="flex flex-col items-center gap-2 bg-white/5 border border-white/10 rounded-sm px-6 py-5 min-w-[160px] hover:bg-white/10 transition-colors">
                 <Award className="w-7 h-7 text-[#F59E0B]" />
-                <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "1.5rem", color: "white", letterSpacing: "0.05em" }}>
+                <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "1.3rem", color: "white", letterSpacing: "0.05em" }}>
                   {cert.name}
                 </div>
                 <div style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: "0.7rem", color: "rgba(255,255,255,0.45)", textAlign: "center", lineHeight: 1.4 }}>
@@ -542,73 +420,6 @@ export default function Home() {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ─── SERVICE AREAS ─── */}
-      <section className="py-20 bg-white">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div>
-              <div className="inline-block bg-[#F59E0B]/10 border-l-4 border-[#F59E0B] px-4 py-1 mb-3">
-                <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "0.8rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "#F59E0B" }}>
-                  Where We Serve
-                </span>
-              </div>
-              <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "clamp(2rem, 4vw, 3rem)", textTransform: "uppercase", color: "#0B1F3A", marginBottom: "1rem" }}>
-                Service Areas<br />Across the US
-              </h2>
-              <p style={{ fontFamily: "'Source Sans 3', sans-serif", color: "#4B5563", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-                MoldGuard Pro serves homeowners and businesses across major metropolitan areas. Our certified teams are strategically located for rapid emergency response.
-              </p>
-              <div className="grid grid-cols-2 gap-2 mb-6">
-                {serviceAreas.map((area) => (
-                  <div key={area} className="flex items-center gap-2">
-                    <MapPin className="w-3.5 h-3.5 text-[#F59E0B] flex-shrink-0" />
-                    <span style={{ fontFamily: "'Source Sans 3', sans-serif", fontSize: "0.9rem", color: "#374151" }}>{area}</span>
-                  </div>
-                ))}
-              </div>
-              <Link href="/service-areas">
-                <span className="btn-navy-outline text-sm">
-                  View All Service Areas <ArrowRight className="w-4 h-4" />
-                </span>
-              </Link>
-            </div>
-
-            <div className="bg-[#F8F9FA] border border-gray-100 p-6 rounded-sm">
-              <div className="flex items-center gap-3 mb-4">
-                <Clock className="w-5 h-5 text-[#F59E0B]" />
-                <h3 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "1.2rem", textTransform: "uppercase", color: "#0B1F3A" }}>
-                  Emergency Response Times
-                </h3>
-              </div>
-              <div className="flex flex-col gap-3">
-                {[
-                  { area: "Major Metro Areas", time: "1–2 Hours", color: "bg-green-500" },
-                  { area: "Suburban Areas", time: "2–4 Hours", color: "bg-[#F59E0B]" },
-                  { area: "Rural Areas", time: "4–6 Hours", color: "bg-orange-500" },
-                ].map((r) => (
-                  <div key={r.area} className="flex items-center justify-between p-3 bg-white border border-gray-100">
-                    <div className="flex items-center gap-2.5">
-                      <div className={`w-2.5 h-2.5 rounded-full ${r.color}`} />
-                      <span style={{ fontFamily: "'Source Sans 3', sans-serif", fontWeight: 500, fontSize: "0.9rem", color: "#374151" }}>{r.area}</span>
-                    </div>
-                    <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "1rem", color: "#0B1F3A" }}>{r.time}</span>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-4 p-3 bg-[#0B1F3A] text-white rounded-sm text-center">
-                <p style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "1rem", letterSpacing: "0.04em" }}>
-                  NOT SURE IF WE SERVE YOUR AREA?
-                </p>
-                <a href="tel:+18005550199" className="text-[#F59E0B] font-bold hover:underline text-sm mt-1 inline-block"
-                  style={{ fontFamily: "'Source Sans 3', sans-serif" }}>
-                  Call (800) 555-0199 — We'll dispatch immediately
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -628,13 +439,13 @@ export default function Home() {
                 Schedule Your<br />Free Inspection
               </h2>
               <p style={{ fontFamily: "'Source Sans 3', sans-serif", color: "rgba(255,255,255,0.65)", lineHeight: 1.7, marginBottom: "2rem" }}>
-                Our certified specialists will assess your property, identify all mold sources, and provide a detailed remediation plan — at no cost to you.
+                Our specialists will assess your property, identify all mold sources, and provide a detailed remediation plan — at no cost to you.
               </p>
               <div className="flex flex-col gap-4">
                 {[
                   { icon: Phone, label: "Emergency Line", value: "(800) 555-0199" },
                   { icon: Clock, label: "Response Time", value: "Available 24/7, 365 days" },
-                  { icon: Shield, label: "Guarantee", value: "Written mold-free guarantee" },
+                  { icon: Shield, label: "Guarantee", value: "Written work guarantee" },
                 ].map((item) => (
                   <div key={item.label} className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-[#F59E0B] rounded-sm flex items-center justify-center flex-shrink-0">
@@ -652,7 +463,7 @@ export default function Home() {
                 ))}
               </div>
               <div className="mt-8">
-                <img src={TEAM_PHOTO} alt="MoldGuard Pro team" className="rounded-sm w-full max-w-sm object-cover" style={{ maxHeight: "200px" }} />
+                <img src={TEAM_PHOTO} alt="ZND-ABS team" className="rounded-sm w-full max-w-sm object-cover" style={{ maxHeight: "200px" }} />
               </div>
             </div>
 

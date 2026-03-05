@@ -5,22 +5,11 @@ import { Phone, MapPin, Clock, ArrowRight } from "lucide-react";
 import { MapView } from "@/components/Map";
 
 const areas = [
-  { city: "New York", state: "NY", zip: "10001", response: "1–2 hrs", lat: 40.7128, lng: -74.0060 },
-  { city: "Los Angeles", state: "CA", zip: "90001", response: "1–2 hrs", lat: 34.0522, lng: -118.2437 },
-  { city: "Chicago", state: "IL", zip: "60601", response: "1–2 hrs", lat: 41.8781, lng: -87.6298 },
-  { city: "Houston", state: "TX", zip: "77001", response: "1–2 hrs", lat: 29.7604, lng: -95.3698 },
-  { city: "Phoenix", state: "AZ", zip: "85001", response: "1–2 hrs", lat: 33.4484, lng: -112.0740 },
-  { city: "Philadelphia", state: "PA", zip: "19101", response: "1–2 hrs", lat: 39.9526, lng: -75.1652 },
-  { city: "San Antonio", state: "TX", zip: "78201", response: "2–3 hrs", lat: 29.4241, lng: -98.4936 },
-  { city: "San Diego", state: "CA", zip: "92101", response: "2–3 hrs", lat: 32.7157, lng: -117.1611 },
-  { city: "Dallas", state: "TX", zip: "75201", response: "1–2 hrs", lat: 32.7767, lng: -96.7970 },
-  { city: "San Jose", state: "CA", zip: "95101", response: "2–3 hrs", lat: 37.3382, lng: -121.8863 },
-  { city: "Austin", state: "TX", zip: "78701", response: "2–3 hrs", lat: 30.2672, lng: -97.7431 },
-  { city: "Jacksonville", state: "FL", zip: "32099", response: "2–3 hrs", lat: 30.3322, lng: -81.6557 },
-  { city: "Fort Worth", state: "TX", zip: "76101", response: "2–3 hrs", lat: 32.7555, lng: -97.3308 },
-  { city: "Columbus", state: "OH", zip: "43085", response: "2–4 hrs", lat: 39.9612, lng: -82.9988 },
-  { city: "Charlotte", state: "NC", zip: "28201", response: "2–4 hrs", lat: 35.2271, lng: -80.8431 },
-  { city: "Indianapolis", state: "IN", zip: "46201", response: "2–4 hrs", lat: 39.7684, lng: -86.1581 },
+  { city: "State College", state: "PA", zip: "16801", response: "Same Day", lat: 40.7934, lng: -77.8600 },
+  { city: "Bellefonte", state: "PA", zip: "16823", response: "30–45 min", lat: 40.9128, lng: -77.7681 },
+  { city: "Philipsburg", state: "PA", zip: "16866", response: "45–60 min", lat: 40.8742, lng: -78.1203 },
+  { city: "Port Matilda", state: "PA", zip: "16870", response: "30–45 min", lat: 40.8517, lng: -77.7947 },
+  { city: "Boalsburg", state: "PA", zip: "16827", response: "20–30 min", lat: 40.8161, lng: -77.6708 },
 ];
 
 export default function ServiceAreas() {
@@ -36,12 +25,12 @@ export default function ServiceAreas() {
               </span>
             </div>
             <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 900, fontSize: "clamp(2.5rem, 6vw, 4.5rem)", textTransform: "uppercase", color: "white", lineHeight: 1.0 }}>
-              Service Areas<br />
-              <span style={{ color: "#F59E0B" }}>Nationwide</span><br />
-              Coverage
+              Serving<br />
+              <span style={{ color: "#F59E0B" }}>State College</span><br />
+              & Surrounding Areas
             </h1>
             <p className="mt-4 text-white/65 text-lg" style={{ fontFamily: "'Source Sans 3', sans-serif" }}>
-              Strategically located teams ensure rapid emergency response across major US metropolitan areas.
+              Fast response times throughout Centre County, Pennsylvania. Same-day service available for emergencies.
             </p>
           </div>
         </div>
@@ -68,8 +57,8 @@ export default function ServiceAreas() {
                     },
                   });
                 });
-                map.setCenter({ lat: 39.5, lng: -98.35 });
-                map.setZoom(4);
+                map.setCenter({ lat: 40.7934, lng: -77.8600 });
+                map.setZoom(11);
               }}
             />
           </div>
@@ -114,10 +103,10 @@ export default function ServiceAreas() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
               <div>
                 <h3 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "1.8rem", textTransform: "uppercase", color: "#F59E0B", marginBottom: "0.5rem" }}>
-                  Don't See Your City?
+                  Need Service Outside These Areas?
                 </h3>
                 <p style={{ fontFamily: "'Source Sans 3', sans-serif", color: "rgba(255,255,255,0.7)", lineHeight: 1.7 }}>
-                  We're expanding rapidly. Call us — we may still be able to dispatch a team to your location, especially for emergency situations.
+                  We primarily serve State College and Centre County. For emergencies outside our typical service area, call us — we may be able to help.
                 </p>
               </div>
               <div className="flex flex-col gap-3">
@@ -126,7 +115,7 @@ export default function ServiceAreas() {
                   Call (800) 555-0199
                 </a>
                 <Link href="/contact">
-                  <span className="btn-white-outline w-full justify-center">Request Service in My Area</span>
+                  <span className="btn-white-outline w-full justify-center">Request Inspection</span>
                 </Link>
               </div>
             </div>
