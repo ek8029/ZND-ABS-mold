@@ -86,7 +86,7 @@ export default function Services() {
             <div className="mt-6 flex gap-3">
               <a href="tel:+12232088501" className="btn-amber">
                 <Phone className="w-4 h-4" />
-                Call (800) 724-3847
+                Call (223) 208-8501
               </a>
               <Link href="/contact">
                 <span className="btn-white-outline">Free Inspection</span>
@@ -176,7 +176,7 @@ export default function Services() {
             <a href="tel:+12232088501" className="inline-flex items-center gap-2 bg-[#0B1F3A] text-white px-6 py-3 font-bold uppercase tracking-wider text-sm hover:bg-[#0d2545] transition-colors"
               style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
               <Phone className="w-4 h-4" />
-              Call (800) 724-3847
+              Call (223) 208-8501
             </a>
             <Link href="/contact">
               <span className="inline-flex items-center gap-2 bg-white text-[#0B1F3A] px-6 py-3 font-bold uppercase tracking-wider text-sm hover:bg-gray-50 transition-colors"

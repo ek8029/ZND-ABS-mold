@@ -112,7 +112,7 @@ export default function ServiceAreas() {
               <div className="flex flex-col gap-3">
                 <a href="tel:+12232088501" className="btn-amber justify-center">
                   <Phone className="w-4 h-4" />
-                  Call (800) 724-3847
+                  Call (223) 208-8501
                 </a>
                 <Link href="/contact">
                   <span className="btn-white-outline w-full justify-center">Request Inspection</span>

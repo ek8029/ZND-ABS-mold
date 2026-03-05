@@ -443,7 +443,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col gap-4">
                 {[
-                  { icon: Phone, label: "Emergency Line", value: "(800) 724-3847" },
+                  { icon: Phone, label: "Emergency Line", value: "(223) 208-8501", href: "tel:+12232088501" },
                   { icon: Clock, label: "Response Time", value: "Available 24/7, 365 days" },
                   { icon: Shield, label: "Guarantee", value: "Written work guarantee" },
                 ].map((item) => (
@@ -475,7 +475,7 @@ export default function Home() {
                     Request Received!
                   </h3>
                   <p style={{ fontFamily: "'Source Sans 3', sans-serif", color: "#4B5563" }}>
-                    Our team will contact you within 30 minutes. For emergencies, call <a href="tel:+12232088501" className="text-[#F59E0B] font-bold">(800) 724-3847</a> now.
+                    Our team will contact you within 30 minutes. For emergencies, call <a href="tel:+12232088501" className="text-[#F59E0B] font-bold">(223) 208-8501</a> now.
                   </p>
                 </div>
               ) : (
@@ -494,7 +494,7 @@ export default function Home() {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         className="w-full border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:border-[#0B1F3A] transition-colors rounded-sm"
-                        placeholder="John Smith"
+                        placeholder="Your Name"
                         style={{ fontFamily: "'Source Sans 3', sans-serif" }}
                       />
                     </div>
@@ -508,7 +508,7 @@ export default function Home() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:border-[#0B1F3A] transition-colors rounded-sm"
-                        placeholder="(555) 000-0000"
+                        placeholder="(223) 208-8501"
                         style={{ fontFamily: "'Source Sans 3', sans-serif" }}
                       />
                     </div>
@@ -522,7 +522,7 @@ export default function Home() {
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       className="w-full border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:border-[#0B1F3A] transition-colors rounded-sm"
-                      placeholder="john@example.com"
+                      placeholder="your@email.com"
                       style={{ fontFamily: "'Source Sans 3', sans-serif" }}
                     />
                   </div>
@@ -554,7 +554,7 @@ export default function Home() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:border-[#0B1F3A] transition-colors rounded-sm resize-none"
-                      placeholder="Visible mold, musty smell, recent water damage..."
+                      placeholder="Describe your mold issue..."
                       style={{ fontFamily: "'Source Sans 3', sans-serif" }}
                     />
                   </div>
@@ -563,7 +563,7 @@ export default function Home() {
                     Request Free Inspection
                   </button>
                   <p className="text-xs text-gray-400 text-center" style={{ fontFamily: "'Source Sans 3', sans-serif" }}>
-                    We respond within 30 minutes. For emergencies, call (800) 724-3847.
+                    We respond within 30 minutes. For emergencies, call (223) 208-8501.
                   </p>
                 </form>
               )}

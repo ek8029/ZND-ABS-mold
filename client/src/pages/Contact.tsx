@@ -110,7 +110,7 @@ export default function Contact() {
                   </p>
                   <a href="tel:+12232088501" className="btn-amber text-base py-3 px-8 inline-flex">
                     <Phone className="w-5 h-5" />
-                    Call (800) 724-3847
+                    Call (223) 208-8501
                   </a>
                 </motion.div>
               ) : (
@@ -121,10 +121,10 @@ export default function Contact() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                     {[
-                      { label: "Full Name *", key: "name", type: "text", placeholder: "John Smith", required: true },
-                      { label: "Phone Number *", key: "phone", type: "tel", placeholder: "(555) 000-0000", required: true },
-                      { label: "Email Address", key: "email", type: "email", placeholder: "john@example.com", required: false },
-                      { label: "Property Address", key: "address", type: "text", placeholder: "123 Main St, City, State", required: false },
+                      { label: "Full Name *", key: "name", type: "text", placeholder: "Your Name", required: true },
+                      { label: "Phone Number *", key: "phone", type: "tel", placeholder: "(223) 208-8501", required: true },
+                      { label: "Email Address", key: "email", type: "email", placeholder: "your@email.com", required: false },
+                      { label: "Property Address", key: "address", type: "text", placeholder: "Your address in State College, PA", required: false },
                     ].map((field) => (
                       <div key={field.key}>
                         <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1.5" style={{ fontFamily: "'Source Sans 3', sans-serif" }}>
@@ -191,7 +191,7 @@ export default function Contact() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       className="w-full border border-gray-200 px-3 py-2.5 text-sm focus:outline-none focus:border-[#0B1F3A] transition-colors rounded-sm resize-none"
-                      placeholder="Describe what you're seeing — visible mold, musty smell, recent water damage, health symptoms, etc."
+                      placeholder="Describe your mold issue and any symptoms..."
                       style={{ fontFamily: "'Source Sans 3', sans-serif" }}
                     />
                   </div>
@@ -201,7 +201,7 @@ export default function Contact() {
                     Submit Free Inspection Request
                   </button>
                   <p className="text-xs text-gray-400 text-center mt-3" style={{ fontFamily: "'Source Sans 3', sans-serif" }}>
-                    We respond within 30 minutes. For emergencies, call (800) 724-3847 directly.
+                    We respond within 30 minutes. For emergencies, call us directly at (223) 208-8501.
                   </p>
                 </form>
               )}

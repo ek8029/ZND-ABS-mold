@@ -62,7 +62,7 @@ export default function FloatingCTA() {
                   style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "0.95rem", letterSpacing: "0.04em", textTransform: "uppercase" }}
                 >
                   <Phone className="w-4 h-4" />
-                  (800) 724-3847
+                  (223) 208-8501
                 </a>
                 <Link href="/contact">
                   <div

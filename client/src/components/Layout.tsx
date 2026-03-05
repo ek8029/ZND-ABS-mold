@@ -58,7 +58,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             className="font-bold underline underline-offset-2 hover:opacity-80 transition-opacity"
             style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 800, fontSize: "1rem" }}
           >
-            (800) 724-3847
+            (223) 208-8501
           </a>
         </div>
       </div>
@@ -138,7 +138,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <a href="tel:+12232088501" className="flex items-center gap-2 text-white hover:text-[#F59E0B] transition-colors">
                 <Phone className="w-4 h-4" />
                 <span style={{ fontFamily: "'Barlow Condensed', sans-serif", fontWeight: 700, fontSize: "1.05rem", letterSpacing: "0.03em" }}>
-                  (800) 724-3847
+                  (223) 208-8501
                 </span>
               </a>
               <Link href="/contact">
@@ -179,7 +179,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <div className="pt-4 flex flex-col gap-3">
                   <a href="tel:+12232088501" className="btn-amber justify-center">
                     <Phone className="w-4 h-4" />
-                    Call (800) 724-3847
+                    Call (223) 208-8501
                   </a>
                   <Link href="/contact">
                     <span className="btn-white-outline w-full justify-center">Free Inspection</span>

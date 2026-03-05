@@ -20,7 +20,7 @@ export default function NotFound() {
         <div className="flex flex-wrap justify-center gap-3">
           <a href="tel:+12232088501" className="btn-amber">
             <Phone className="w-4 h-4" />
-            Call (800) 724-3847
+            Call (223) 208-8501
           </a>
           <Link href="/">
             <span className="btn-navy-outline">
